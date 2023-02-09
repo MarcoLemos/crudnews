@@ -3,7 +3,7 @@ name = "crudnews"
 version = "0.1.0"
 description = "micro web app for fictional news"
 authors = ["Marco Lemos <marco.trab4@gmail.com>"]
-readme = "README.md"
+readme =  ["docs/README.md"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
