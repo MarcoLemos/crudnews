@@ -1,0 +1,3 @@
+site_name: crudnews
+nav:
+    - Readme: 'README.md'
