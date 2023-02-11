@@ -1,5 +1,5 @@
 POETRY = poetry run
-.PHONY: install shell run format test sec docs image cont
+.PHONY: install shell run format test sec docs img
 
 
 install:
@@ -17,3 +17,7 @@ sec:
 	@${POETRY} pip-audit
 docs:
 	@${POETRY} mkdocs serve
+img:
+	docker-compose --env-file .env up -d mongo
+imgd:
+	docker-compose --env-file .env down
