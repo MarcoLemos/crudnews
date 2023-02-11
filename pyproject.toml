@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "crudnews"
-version = "0.1.0"
+version = "0.1.2"
 description = "micro web app for fictional news"
 authors = ["Marco Lemos <marco.trab4@gmail.com>"]
 readme =  ["docs/README.md"]

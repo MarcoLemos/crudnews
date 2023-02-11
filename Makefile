@@ -1,5 +1,5 @@
 POETRY = poetry run
-.PHONY: install shell run format test sec docs img
+.PHONY: install shell run format test sec docs img imgm imgd
 
 
 install:
@@ -18,6 +18,8 @@ sec:
 docs:
 	@${POETRY} mkdocs serve
 img:
+	docker-compose --env-file .env up -d
+imgm:
 	docker-compose --env-file .env up -d mongo
 imgd:
 	docker-compose --env-file .env down

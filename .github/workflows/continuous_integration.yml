@@ -30,7 +30,7 @@ jobs:
           run: poetry install --no-interaction
 
         - name: Create mongodb
-          run: make img
+          run: make imgm
 
         - name: Format
           run: make format
