@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.11-slim
 
 # Configure Poetry
 ENV POETRY_VERSION=1.3.2
@@ -24,4 +24,4 @@ RUN poetry install --without dev --no-root
 # Run the app
 
 COPY crudnews ./crudnews
-CMD ["poetry","run","uvicorn","crudnews.main:app", "--host", "0.0.0.0", "--port", "8080" ]
+CMD ["poetry","run","uvicorn","crudnews.main:app", "--host", "0.0.0.0", "--port", "8000" ]
