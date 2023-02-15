@@ -39,7 +39,7 @@ async def test_count_articles(client: AsyncClient):
     response = await client.get('/articles/count')
     assert response.status_code == 200
     assert isinstance(response.json(), int)
-
+        
 @pytest.mark.anyio
 async def test_post_article(client: AsyncClient):
     response = await client.post(
@@ -50,6 +50,8 @@ async def test_post_article(client: AsyncClient):
     assert isinstance(response.json(), dict)
     if response.json():
         assert isinstance(response.json()['title'], str)
+        article_id = response.json()['id']
+        response = await client.delete(f'/articles/{article_id}')
 
 
 @pytest.mark.anyio
