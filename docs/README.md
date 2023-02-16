@@ -79,7 +79,7 @@ make docs
 make run
 ~~~
 
-O projeto estará acessível em (http://0.0.0.0:8000/graphql)
+O projeto estará acessível em (http://127.0.0.1:8000/docs)
 
 O projeto também conta com dependências para formatação, teste e checagem de bibliotecas
 
