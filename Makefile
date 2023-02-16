@@ -6,6 +6,8 @@ install:
 	@poetry install
 shell:
 	@poetry shell
+run:
+	uvicorn crudnews.main:app
 format:
 	@${POETRY} isort .
 	@${POETRY} blue .
