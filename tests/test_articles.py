@@ -1,6 +1,7 @@
 import pytest
 from httpx import AsyncClient
 
+
 @pytest.mark.anyio
 async def test_get_article_by_id(client: AsyncClient):
     response = await client.post(
@@ -39,7 +40,8 @@ async def test_count_articles(client: AsyncClient):
     response = await client.get('/articles/count')
     assert response.status_code == 200
     assert isinstance(response.json(), int)
-        
+
+
 @pytest.mark.anyio
 async def test_post_article(client: AsyncClient):
     response = await client.post(

@@ -1,4 +1,5 @@
 from typing import List
+
 from fastapi import APIRouter, HTTPException
 from odmantic import AIOEngine, ObjectId
 from pymongo.errors import ConnectionFailure, ServerSelectionTimeoutError
@@ -13,6 +14,7 @@ router = APIRouter(
 )
 
 CON_ERR = 'Erro de conexão com o banco de dados'
+
 
 @router.get('', response_model=List[Articles])
 async def get_articles():
